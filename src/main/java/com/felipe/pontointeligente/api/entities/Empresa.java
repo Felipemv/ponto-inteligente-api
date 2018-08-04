@@ -1,4 +1,4 @@
-package entities;
+package com.felipe.pontointeligente.api.entities;
 
 import java.io.Serializable;
 import java.util.Date;
