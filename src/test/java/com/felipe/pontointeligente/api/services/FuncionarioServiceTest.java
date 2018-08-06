@@ -21,7 +21,7 @@ import com.felipe.pontointeligente.api.repositories.FuncionarioRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles
+@ActiveProfiles("test")
 public class FuncionarioServiceTest {
 
 	@MockBean
