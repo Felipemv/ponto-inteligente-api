@@ -1,4 +1,4 @@
-/*package com.felipe.pontointeligente.api;
+package com.felipe.pontointeligente.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,4 +15,4 @@ public class PontoInteligenteApplicationTests {
 	public void contextLoads() {
 	}
 
-}*/
+}
