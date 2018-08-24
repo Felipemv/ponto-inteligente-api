@@ -70,4 +70,5 @@ public class LancamentoDto {
 		return "LancamentoDto [id=" + id + ", data=" + data + ", tipo=" + tipo + ", descricao=" + descricao
 				+ ", localizacao=" + localizacao + ", funcionarioId=" + funcionarioId + "]";
 	}
+
 }
