@@ -45,10 +45,9 @@ public class EmpresaControllerTest {
 	@WithMockUser
 	public void testBuscarEmpresaCnpjInvalido() throws Exception {
 		BDDMockito.given(this.empresaService.buscarPorCnpj(Mockito.anyString())).willReturn(Optional.empty());
-
 		mvc.perform(MockMvcRequestBuilders.get(BUSCAR_EMPRESA_CNPJ_URL + CNPJ).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isBadRequest())
-				.andExpect(jsonPath("$.errors").value("Empresa não encontrada para o CNPJ: " + CNPJ));
+				.andExpect(jsonPath("$.errors").value("Empresa não encontrada para o CNPJ " + CNPJ));
 	}
 
 	@Test
@@ -65,11 +64,10 @@ public class EmpresaControllerTest {
 
 	private Empresa obterDadosEmpresa() {
 		Empresa empresa = new Empresa();
-
 		empresa.setId(ID);
 		empresa.setRazaoSocial(RAZAO_SOCIAL);
 		empresa.setCnpj(CNPJ);
-
 		return empresa;
 	}
+
 }
