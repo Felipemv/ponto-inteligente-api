@@ -44,6 +44,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public JwtAuthenticationTokenFilter authenticationTokenFilterBean() throws Exception {
 		return new JwtAuthenticationTokenFilter();
 	}
+	
+	@Bean
+	public JwtAuthenticationEntryPoint authenticationEntryPointBean() throws Exception {
+		return new JwtAuthenticationEntryPoint();
+	}
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {

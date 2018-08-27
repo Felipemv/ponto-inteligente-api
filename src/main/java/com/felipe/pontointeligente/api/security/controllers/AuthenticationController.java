@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -44,6 +45,18 @@ public class AuthenticationController {
 	
 	@Autowired
 	private UserDetailsService userDetailsService;
+	
+	@Bean
+	public AuthenticationManager authenticationManagerBean() {
+		return new AuthenticationManager() {
+			
+			@Override
+			public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+	}
 
 	/**
 	 * Gera e retorna um novo token JWT.
